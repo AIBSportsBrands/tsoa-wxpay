@@ -1,0 +1,11 @@
+node_modules
+build
+.DS_Store
+.env
+yarn-error.log
+.idea/
+
+src/controllers/routes.ts
+src/controllers/swagger.json
+apiclient_cert.pem
+apiclient_key.pem
