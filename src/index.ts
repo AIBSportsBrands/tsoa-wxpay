@@ -2,7 +2,7 @@
  * IMPORTS
  */
 
-import {app} from './app';
+import { app } from './app';
 
 import { port } from './env';
 
@@ -11,5 +11,5 @@ import { port } from './env';
  */
 
 app.listen(port, () => {
-    console.log(`Listening at http://localhost:${port}`);
+  console.log(`Listening at http://localhost:${port}`);
 });

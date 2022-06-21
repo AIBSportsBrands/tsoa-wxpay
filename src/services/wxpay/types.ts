@@ -1,5 +1,5 @@
-import {H5PayRequest} from '../../clients/wxpay-api/types';
+import { H5PayRequest } from '../../clients/wxpay-api/types';
 
 export interface IwxPayService {
-    h5Pay(req: H5PayRequest): Promise<any>;
+  h5Pay(req: H5PayRequest): Promise<any>;
 }
