@@ -6,7 +6,8 @@
   "license": "MIT",
   "scripts": {
     "dev": "tsoa spec-and-routes && concurrently \"nodemon\" \"nodemon -x tsoa spec-and-routes\"",
-    "build": "tsoa spec-and-routes && tsc"
+    "build": "tsoa spec-and-routes && tsc",
+    "lint": "eslint src/**/*"
   },
   "dependencies": {
     "body-parser": "^1.20.0",
