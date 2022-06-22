@@ -6,10 +6,9 @@ import { getEnvVar } from '../../env';
 
 const getWxPayApi = () => (
   {
-    endpoint: getEnvVar('WXPAY_H5_URL'),
     wxpay: new WxPay({
-      appid: '直连商户申请的公众号或移动应用appid',
-      mchid: '商户号',
+      appid: getEnvVar('WXPAY_APPID'),
+      mchid: getEnvVar('WXPAY_MCHID'),
       publicKey: fs.readFileSync('./apiclient_cert.pem'), // 公钥
       privateKey: fs.readFileSync('./apiclient_key.pem'), // 秘钥
     }),
@@ -18,5 +17,5 @@ const getWxPayApi = () => (
 
 export const getWxPayApiClient = moize(() => {
   const api = getWxPayApi();
-  return new WxPayClient(api.endpoint, api.wxpay);
+  return new WxPayClient(api.wxpay);
 });

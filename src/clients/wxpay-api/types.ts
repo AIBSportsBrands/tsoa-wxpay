@@ -1,6 +1,4 @@
 export interface H5PayRequest {
-  appid: string,
-  mchid: string,
   description: string,
   out_trade_no: string,
   attach: string,
@@ -24,4 +22,8 @@ interface H5Info {
   type: string,
   app_name: string,
   app_url: string,
+}
+
+export interface H5PayResponse {
+  h5_url: string,
 }
