@@ -3,7 +3,6 @@ import WxPay from 'wechatpay-node-v3';
 import { H5PayRequest } from './types';
 
 export class WxPayClient {
-
   readonly wxpay: WxPay;
 
   getHeaders(authorization: string): Headers {

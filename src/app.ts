@@ -1,9 +1,17 @@
-import express, { Response as ExResponse, Request as ExRequest } from "express";
+import express, { Response as ExResponse, Request as ExRequest } from 'express';
 import bodyParser from 'body-parser';
 import swaggerUi from 'swagger-ui-express';
+import cors from 'cors';
 import { RegisterRoutes } from './controllers/routes';
 
 export const app = express();
+
+app.use(
+  cors({
+    allowedHeaders: '*',
+    exposedHeaders: '*',
+  }),
+);
 
 // Use body parser to read sent json payloads
 app.use(
